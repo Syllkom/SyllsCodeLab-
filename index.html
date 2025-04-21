@@ -5,10 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Syll's CodeLab - Desarrollo de Bots y Servicios Web</title>
     <link rel="stylesheet" href="./assets/style/styles.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
     <meta property="og:title" content="HorekuOs | Syllkom ">
-    <meta property="og:description" content="WhatsApp simple bot">
-    <meta property="og:image" content="https://Syllscodelab.netlify.app//assets/images/syllkom.png">
+    <meta property="og:description" content="Ofrecemos soluciones innovadoras en desarrollo de bots y páginas web para transformar tu comunicación con clientes.">
+    <meta property="og:image" content="https://syllscodelab.netlify.app//assets/images/preview.png">
   
     <link rel="icon" href="./assets/icons/scl.png" type="image/x-icon">
     
@@ -19,7 +20,6 @@
             <div class="logo">
                 <img src="./assets/icons/scl.png" alt="Syll's CodeLab Logo">
                 <div class="logo-text">Syll's CodeLab</div>
-            </div>
             <nav>
                 <ul>
                     <li><a href="#home" class="active">Home</a></li>
@@ -33,6 +33,10 @@
             <div class="mobile-menu">☰</div>
         </div>
     </header>
+    
+    <div class="modal-container" id="authModal">
+    
+    </div>
 
     <section id="home" class="hero">
         <div class="container">
@@ -373,7 +377,7 @@
                         <label for="message">Mensaje</label>
                         <textarea id="message" class="form-control" required></textarea>
                     </div>
-                    <button type="submit" class="btn btn-primary">Enviar mensaje</button>
+                    <button type="submit" class="btn btn-primary">Contactar por WhatsApp</button>
                 </form>
             </div>
         </div>
