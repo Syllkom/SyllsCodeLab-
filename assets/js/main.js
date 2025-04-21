@@ -68,9 +68,9 @@ function updateHeaderOnScroll() {
 }
 
 window.addEventListener('scroll', updateHeaderOnScroll)
-updateHeaderOnScroll();
+updateHeaderOnScroll()
 
-let lastScrollTop = 0;
+let lastScrollTop = 0
 
 function handleHeaderVisibility() {
     const header = document.querySelector('header')
@@ -86,3 +86,21 @@ function handleHeaderVisibility() {
 }
 
 window.addEventListener('scroll', handleHeaderVisibility)
+
+    const contactForm = document.querySelector('.contact-form form')
+    
+    contactForm.addEventListener('submit', function(event) {
+        event.preventDefault()
+        
+        const name = document.getElementById('name').value.trim();
+        const email = document.getElementById('email').value.trim()
+        const subject = document.getElementById('subject').value.trim()
+        const message = document.getElementById('message').value.trim()
+        
+        const whatsappMessage = `Hola, soy *${name}.*\n- Asunto: ${subject}\n- Email: ${email}\n*Mensaje:* ${message}`
+        
+        const encodedMessage = encodeURIComponent(whatsappMessage)
+        
+        const whatsappLink = `https://wa.me/573113825327?text=${encodedMessage}`
+        window.open(whatsappLink, '_blank')
+    })
